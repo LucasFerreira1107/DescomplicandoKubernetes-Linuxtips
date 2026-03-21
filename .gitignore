@@ -1,0 +1,39 @@
+# Vagrant — estado local, IDs das VMs, chaves SSH geradas automaticamente
+.vagrant/
+
+# Variáveis de ambiente e segredos locais
+.env
+.env.*
+!.env.example
+
+# Kubernetes — kubeconfig local (não versionar credenciais de cluster)
+kubeconfig
+*.kubeconfig
+kubeconfig.*
+
+# Certificados e chaves privadas (TLS, etc.)
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Se você precisa versionar arquivos de exemplo de laboratório (.key/.pem),
+# comente as linhas acima ou use exceções, por exemplo:
+# !day-08/exemplo-fake.key
+
+# Sistema operacional
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editores e IDEs
+.idea/
+*.iml
+*.swp
+*.swo
+*~
+
+# Logs e temporários
+*.log
+*.tmp
+.cache/
