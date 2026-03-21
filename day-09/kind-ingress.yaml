@@ -1,0 +1,16 @@
+kind: Cluster
+apiVersion: kind.x-k8s.io/v1alpha4
+nodes:
+- role: control-plane
+  kubeadmConfigPatches:
+  - |
+    kind: InitConfiguration
+    nodeRegistration:
+      kubeletExtraArgs:
+        node-labels: "ingress-ready=true"
+  extraPortMappings:
+  - containerPort: 32000   # <--- A porta exposta pelo Node
+    hostPort: 8080         # <--- A porta que você vai digitar no Windows
+    protocol: TCP
+- role: worker
+- role: worker
