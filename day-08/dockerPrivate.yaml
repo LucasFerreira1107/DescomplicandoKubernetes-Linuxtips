@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: dockerprivado-teste
+spec:
+  containers:
+  - name: dockerprivado-teste
+    image: imagem-privada
+  imagePullSecrets:
+  - name: dockerhub-secret
