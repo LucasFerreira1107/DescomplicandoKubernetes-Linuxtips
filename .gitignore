@@ -28,9 +28,11 @@ Desktop.ini
 
 # Editores e IDEs
 .idea/
+.cursor/
 *.iml
 *.swp
 *.swo
+*.cursor/
 *~
 
 # Logs e temporários
